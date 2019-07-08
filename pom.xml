@@ -1,0 +1,230 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>1</groupId>
+	<artifactId>ChartF</artifactId>
+	<version>1</version>
+	
+	<properties>
+		<maven.compiler.source>12</maven.compiler.source>
+		<maven.compiler.target>12</maven.compiler.target>
+		<spring.version>5.1.7.RELEASE</spring.version>
+		<aspect.version>1.9.4</aspect.version>
+	</properties>
+	
+	
+	<dependencies>
+		
+		
+		<!-- ==============================JavaFX======================================= -->
+		<dependency>
+		    <groupId>org.openjfx</groupId>
+		    <artifactId>javafx-controls</artifactId>
+		    <version>13-ea+9</version>
+		</dependency>
+
+		<dependency>
+		    <groupId>org.openjfx</groupId>
+		    <artifactId>javafx-graphics</artifactId>
+		    <version>13-ea+9</version>
+		</dependency>
+
+		<dependency>
+		    <groupId>org.openjfx</groupId>
+		    <artifactId>javafx-base</artifactId>
+		    <version>13-ea+9</version>
+		</dependency>
+
+		<dependency>
+		    <groupId>org.openjfx</groupId>
+		    <artifactId>javafx-fxml</artifactId>
+		    <version>13-ea+9</version>
+		</dependency>
+
+		<dependency>
+		    <groupId>org.openjfx</groupId>
+		    <artifactId>javafx-web</artifactId>
+		    <version>13-ea+9</version>
+		</dependency>
+		<!-- ==============================JavaFX======================================= -->
+
+
+
+		<!-- ==============================SpringCore=================================== -->
+		<!-- spring AOP -->
+		<dependency>
+    		<groupId>org.springframework</groupId>
+    		<artifactId>spring-aop</artifactId>
+    		<version>${spring.version}</version>
+		</dependency>
+
+		<!-- AspectJ required for Spring AOP -->
+		<dependency>
+		    <groupId>org.aspectj</groupId>
+		    <artifactId>aspectjweaver</artifactId>
+		    <version>${aspect.version}</version>
+		</dependency>
+
+
+		<!-- spring aspects -->
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-aspects</artifactId>
+		    <version>${spring.version}</version>
+		</dependency>
+
+		<!-- spring beans -->
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-beans</artifactId>
+		    <version>${spring.version}</version>
+		</dependency>
+
+		<!-- spring context -->
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-context</artifactId>
+		    <version>${spring.version}</version>
+		</dependency>
+
+		<!-- spring context indexer -->
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-context-indexer</artifactId>
+		    <version>${spring.version}</version>
+		    <scope>optional</scope>
+		</dependency>
+
+		<!-- spring context support -->
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-context-support</artifactId>
+		    <version>${spring.version}</version>
+		</dependency>
+
+
+		<!-- spring core -->
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-core</artifactId>
+		    <version>${spring.version}</version>
+		</dependency>
+
+		<!-- spring expression -->
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-expression</artifactId>
+		    <version>${spring.version}</version>
+		</dependency>
+
+		<!-- spring instrument -->
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-instrument</artifactId>
+		    <version>${spring.version}</version>
+		</dependency>
+
+
+		<!-- spring JCL -->
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-jcl</artifactId>
+		    <version>${spring.version}</version>
+		</dependency>
+
+		<!-- spring JDBC -->
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-jdbc</artifactId>
+		    <version>${spring.version}</version>
+		</dependency>
+
+		<!-- spring JMS -->
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-jms</artifactId>
+		    <version>${spring.version}</version>
+		</dependency>
+
+		<!-- spring message -->
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-messaging</artifactId>
+		    <version>${spring.version}</version>
+		</dependency>
+
+		<!-- spring ORM -->
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-orm</artifactId>
+		    <version>${spring.version}</version>
+		</dependency>
+
+		<!-- spring OXM -->
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-oxm</artifactId>
+		    <version>${spring.version}</version>
+		</dependency>
+
+
+		<!-- spring test -->
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-test</artifactId>
+		    <version>${spring.version}</version>
+		    <scope>test</scope>
+		</dependency>
+
+
+		<!-- spring TX -->
+		<dependency>
+		    <groupId>org.springframework</groupId>
+		    <artifactId>spring-tx</artifactId>
+		    <version>${spring.version}</version>
+		</dependency>		
+		<!-- ==============================SpringCore=================================== -->
+		
+		
+	</dependencies>
+	
+	
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<configuration>
+		
+					<archive>
+						<manifest>
+							<mainClass>com.ubaid.app.App</mainClass>
+						</manifest>
+					</archive>
+		
+					<descriptorRefs>
+						<descriptorRef>jar-with-dependencies</descriptorRef>
+					</descriptorRefs>
+					
+					<filename>ChartF</filename>
+					<appendAssemblyId>false</appendAssemblyId>
+		
+				</configuration>
+			</plugin>
+						
+		</plugins>
+		
+		
+		<resources>
+	        <resource>
+	            <directory>src/main/resources</directory>
+	            <includes>
+	                <include>**/*.fxml</include>
+	                <include>**/*.png</include>
+	                <include>**/*.md</include>
+	            </includes>
+	        </resource>
+	    </resources>
+		
+	</build>	
+		
+	
+</project>
