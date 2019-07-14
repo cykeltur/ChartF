@@ -19,5 +19,7 @@
 
 <ol>
 	<h3>Initial Requirements</h3>
+Do a multiple user level flowchart based product order phase 
+With trigger conditions based products and services like approval person  and so on
 </ol>
 
